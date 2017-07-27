@@ -3,8 +3,8 @@ try:
   from flask_basicauth import BasicAuth
   basic_auth = BasicAuth(app)
 except:
-  import os
-  os.system("pip install Flask-BasicAuth")
+  import subprocess
+  subprocess.Popen("pip install Flask-BasicAuth")
   cbpi.notify("HTTPAuth Error", "Flask-BasicAuth was not insalled. Restart to activate HTTPAuth", type="danger", timeout=10000)
 
 def auth_password():
