@@ -15,6 +15,8 @@ def auth_password():
   else:
     return password
 
-app.config['BASIC_AUTH_USERNAME'] = 'admin'
-app.config['BASIC_AUTH_PASSWORD'] = auth_password()
-app.config['BASIC_AUTH_FORCE'] = True
+@cbpi.initalizer(order=1)
+def init_basic_auth(self):
+  app.config['BASIC_AUTH_USERNAME'] = 'admin'
+  app.config['BASIC_AUTH_PASSWORD'] = auth_password()
+  app.config['BASIC_AUTH_FORCE'] = True
