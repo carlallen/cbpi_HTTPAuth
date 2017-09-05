@@ -15,7 +15,7 @@ From your cbpi directory run:
 
 ## Configuration
 
-The pasword can be changed in the system parameters.
+The pasword can be changed in the system parameters. However for simplicity of the code, you must restart cbpi for the password to change to take effect.
 
 The username is `admin`
 The default password is `password`
